@@ -9,11 +9,17 @@ namespace TurtleChallenge
 		private const int DefaultNumberOfRows = 4;
 		private const int DefaultNumberOfColumn = 6;
 
+		private const int MaxNumberOfColumns = 100;
+		private const int MaxNumberOfRows = 100;
+		private const int MaxNumberOfMines = 10;
+		
 		public GameObject(int? rows, int? columns, Position turtleCoordinates, IEnumerable<Position> minesCoordinates, Position exitCoordinates)
 		{
 			GameEnd = false;
 			Rows = rows ?? DefaultNumberOfRows;
+			if (Rows > MaxNumberOfRows) Rows = MaxNumberOfRows;
 			Columns = columns ?? DefaultNumberOfColumn;
+			if (Columns > MaxNumberOfColumns) Columns = MaxNumberOfColumns;
 			BuildGameGrid(rows, columns);
 			CreateAndPlaceTurtleInTheGrid(turtleCoordinates);
 			SetMines(minesCoordinates);
@@ -24,7 +30,9 @@ namespace TurtleChallenge
 		{
 			GameEnd = false;
 			Rows = rows ?? DefaultNumberOfRows;
+			if (Rows > MaxNumberOfRows) Rows = MaxNumberOfRows;
 			Columns = columns ?? DefaultNumberOfColumn;
+			if (Columns > MaxNumberOfColumns) Columns = MaxNumberOfColumns;
 			BuildGameGrid(rows, columns);
 			SetMines(numberOfMines);
 			SetExit();
@@ -137,7 +145,6 @@ namespace TurtleChallenge
 
 		}
 
-		public const int MaxNumberOfMines = 6;
 		public int Columns { get; }
 		public int Rows { get; }
 		public Turtle Turtle { get; private set; }
@@ -145,7 +152,7 @@ namespace TurtleChallenge
 
 		private void SetMines(int numberOfMines)
 		{
-			if(numberOfMines > MaxNumberOfMines) throw new ArgumentOutOfRangeException($"Max number of mines is {MaxNumberOfMines}");
+			if (numberOfMines > MaxNumberOfMines) numberOfMines = MaxNumberOfMines;
 
 			var cellsCount = Cells.Count-1;
 			var randomize = new Random();

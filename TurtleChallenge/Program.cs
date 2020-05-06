@@ -1,8 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Threading;
 using Newtonsoft.Json;
 using TurtleChallenge.Payload;
 
@@ -10,9 +8,9 @@ namespace TurtleChallenge
 {
 	class Program
 	{
-		private const int MaxNumberOfColumns = 10;
-		private const int MaxNumberOfRows = 10;
-		private const int MaxNumberOfMines = 6;
+		private const int MaxNumberOfColumns = 100;
+		private const int MaxNumberOfRows = 100;
+		private const int MaxNumberOfMines = 10;
 
 		static void Main(string[] args)
 		{

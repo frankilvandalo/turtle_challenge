@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Linq;
 using Moq;
@@ -225,8 +226,14 @@ public class TurtleChallengeUnitTests
 			Assert.Equal(Orientation.North,_gameObject.Turtle.CurrentOrientation);
 
 			Assert.Equal(initialOrientation,_gameObject.Turtle.CurrentOrientation);
+		}
 
-			
+		[Fact]
+		public void Given_the_Turtle_When_Hitting_a_cell_outsideOfTheGrid_an_exception_is_thrown()
+		{
+			_gameObject.MoveTurtle(Move.Up);
+
+			Assert.Throws<ArgumentOutOfRangeException>(() => _gameObject.MoveTurtle(Move.Up));
 		}
 	}
 }
