@@ -1,0 +1,48 @@
+{
+	"rows": 4,
+	"columns": 5,
+
+	"turtlePosition": {
+		"position": {
+			"x": 1,
+			"y": 1
+		},
+		"orientation": "north"
+	},
+
+	"exit": {
+		"position": {
+			"x": 4,
+			"y": 3
+		}
+	},
+
+	"mines": [
+		{
+			"position": {
+				"x": 0,
+				"y": 0
+			}
+
+		},
+		{
+			"position": {
+				"x": 3,
+				"y": 2
+			}
+		},
+		{
+
+			"position": {
+				"x": 2,
+				"y": 3
+			}
+		},
+		{
+			"position": {
+				"x": 1,
+				"y": 2
+			}
+		}
+	]
+}

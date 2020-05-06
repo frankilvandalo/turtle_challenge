@@ -1,0 +1,29 @@
+{
+	"sequence": [
+		{
+			"id": 0,
+			"rotate": false,
+			"moveForward": true
+		},
+		{
+			"id": 1,
+			"rotate": true,
+			"moveForward": true
+		},
+		{
+			"id": 2,
+			"rotate": false,
+			"moveForward": true
+		},
+		{
+			"id": 3,
+			"rotate": true,
+			"moveForward": true
+		},
+		{
+			"id": 4,
+			"rotate": false,
+			"moveForward": true
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TurtleChallenge": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Source\\turtle_challenge\\TurtleChallenge\\files\\GameGrid.json\" \"C:\\Source\\turtle_challenge\\TurtleChallenge\\files\\TurtleSequenceWin.json\""
+    }
+  }
+}
