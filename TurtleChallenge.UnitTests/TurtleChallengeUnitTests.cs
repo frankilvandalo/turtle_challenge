@@ -1,9 +1,7 @@
-using System;
 using System.IO;
 using System.Linq;
 using Moq;
 using Newtonsoft.Json;
-using TurtleChallenge;
 using TurtleChallenge.Payload;
 using Xunit;
 
