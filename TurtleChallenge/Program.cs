@@ -22,7 +22,7 @@ namespace TurtleChallenge
 			Console.WriteLine("*****************************************************************************");
 			Console.WriteLine("*****************************************************************************");
 
-			if (args != null)
+			if (args != null && args.Length > 0)
 			{
 				var gameGrid = JsonConvert.DeserializeObject<GameGrid>(File.ReadAllText(args[0]));
 				
